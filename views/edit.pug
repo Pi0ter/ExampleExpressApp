@@ -1,0 +1,15 @@
+extends layout 
+block content 
+    h1 Edytuj przedmiot 
+    form(method="post" action="/edit/"+id)
+        label Nazwa
+        br
+        input(type="text" name="name" value=name)
+        br
+        label Ocena
+        br
+        input(type="text" name="note" value=note)   
+        br
+        input(type="submit" value="EDYTUJ")
+    if message!=''
+        p #{message}

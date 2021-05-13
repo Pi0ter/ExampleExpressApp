@@ -1,0 +1,7 @@
+extends layout
+block content 
+    h1 USUŃ przedmiot #{name}
+    form(method="post" action="/delete/"+id)
+        input(type="submit" value="USUŃ")
+    if message!=''
+        p #{message}

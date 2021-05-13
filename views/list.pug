@@ -1,0 +1,21 @@
+extends layout 
+block content 
+    h1 Lista przedmiotów 
+    table 
+        tr 
+            th Lp 
+            th Przedmiot 
+            th Ocena
+            th Data dodania oceny
+        each course, index in coursesList 
+            tr
+                td=index +1
+                td=course.name 
+                td=course.note
+                td=course.data_dodania
+                    a(href="/edit/"+course.id) Edytuj 
+                td
+                    a(href="/delete/"+course.id) Usuń
+
+
+
